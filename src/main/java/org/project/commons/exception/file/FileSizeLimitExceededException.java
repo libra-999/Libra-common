@@ -1,16 +1,10 @@
-package com.ruoyi.common.exception.file;
+package org.project.commons.exception.file;
 
-/**
- * 文件名大小限制异常类
- * 
- * @author ruoyi
- */
-public class FileSizeLimitExceededException extends FileException
-{
-    private static final long serialVersionUID = 1L;
+import org.springframework.http.HttpStatus;
 
-    public FileSizeLimitExceededException(long defaultMaxSize)
-    {
-        super("upload.exceed.maxSize", new Object[] { defaultMaxSize });
+public class FileSizeLimitExceededException extends FileException {
+
+    public FileSizeLimitExceededException(String module, HttpStatus code, String msg) {
+        super(module + "upload.exceed.maxSize", code, msg);
     }
 }

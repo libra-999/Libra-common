@@ -1,30 +1,20 @@
-package com.ruoyi.common.enums;
+package org.project.commons.enums;
 
-/**
- * 用户状态
- * 
- * @author ruoyi
- */
-public enum UserStatus
-{
-    OK("0", "正常"), DISABLE("1", "停用"), DELETED("2", "删除");
+import lombok.Getter;
 
+public enum UserStatus {
+    OK("0", "normal"),
+    DISABLE("1", "disable"),
+    DELETED("2", "delete");
+
+    @Getter
     private final String code;
+
+    @Getter
     private final String info;
 
-    UserStatus(String code, String info)
-    {
+    UserStatus(String code, String info) {
         this.code = code;
         this.info = info;
-    }
-
-    public String getCode()
-    {
-        return code;
-    }
-
-    public String getInfo()
-    {
-        return info;
     }
 }

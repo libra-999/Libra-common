@@ -1,16 +1,10 @@
-package com.ruoyi.common.exception.user;
+package org.project.commons.exception.user;
 
-/**
- * 验证码错误异常类
- * 
- * @author ruoyi
- */
+import org.springframework.http.HttpStatus;
+
 public class CaptchaException extends UserException
 {
-    private static final long serialVersionUID = 1L;
-
-    public CaptchaException()
-    {
-        super("user.jcaptcha.error", null);
+    public CaptchaException(String module, HttpStatus status, String message) {
+        super("user.captcha.error", HttpStatus.BAD_REQUEST, null);
     }
 }

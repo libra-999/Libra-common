@@ -1,19 +1,11 @@
-package com.ruoyi.common.exception.file;
+package org.project.commons.exception.file;
 
-import com.ruoyi.common.exception.base.BaseException;
+import org.project.commons.exception.base.BaseException;
+import org.springframework.http.HttpStatus;
 
-/**
- * 文件信息异常类
- * 
- * @author ruoyi
- */
-public class FileException extends BaseException
-{
-    private static final long serialVersionUID = 1L;
+public class FileException extends BaseException {
 
-    public FileException(String code, Object[] args)
-    {
-        super("file", code, args, null);
+    public FileException(String module, HttpStatus code, String msg) {
+        super("file", code, msg);
     }
-
 }

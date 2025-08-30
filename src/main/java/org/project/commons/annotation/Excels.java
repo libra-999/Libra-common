@@ -1,4 +1,4 @@
-package main.java.org.project.commons.annotation;
+package org.project.commons.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -10,5 +10,5 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Excels
 {
-    public Excel[] value();
+    Excel[] value();
 }

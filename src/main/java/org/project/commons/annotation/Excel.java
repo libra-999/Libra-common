@@ -1,16 +1,19 @@
-package main.java.org.project.commons.annotation;
+package org.project.commons.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.math.BigDecimal;
-import com.ruoyi.common.utils.poi.ExcelHandlerAdapter;
+
+import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.IndexedColors;
+import org.project.commons.enums.BusinessType;
+import org.project.commons.utils.poi.ExcelHandlerAdapter;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface Excel
-{
+public @interface Excel {
 
     int sort() default Integer.MAX_VALUE;
 
@@ -68,36 +71,30 @@ public @interface Excel
 
     String[] args() default {};
 
-    Type type() default Type.ALL;
+    BusinessType type() default BusinessType.ALL;
 
-    enum Type
-    {
+    enum Type {
         ALL(0), EXPORT(1), IMPORT(2);
         private final int value;
 
-        Type(int value)
-        {
+        Type(int value) {
             this.value = value;
         }
 
-        public int value()
-        {
+        public int value() {
             return this.value;
         }
     }
 
-    enum ColumnType
-    {
+    enum ColumnType {
         NUMERIC(0), STRING(1), IMAGE(2), TEXT(3);
         private final int value;
 
-        ColumnType(int value)
-        {
+        ColumnType(int value) {
             this.value = value;
         }
 
-        public int value()
-        {
+        public int value() {
             return this.value;
         }
     }

@@ -1,19 +1,7 @@
-package com.ruoyi.common.enums;
+package org.project.commons.enums;
 
-/**
- * 数据源
- * 
- * @author ruoyi
- */
-public enum DataSourceType
-{
-    /**
-     * 主库
-     */
+
+public enum DataSourceType {
     MASTER,
-
-    /**
-     * 从库
-     */
     SLAVE
 }

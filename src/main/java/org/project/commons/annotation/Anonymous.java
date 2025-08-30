@@ -1,4 +1,4 @@
-package main.java.org.project.commons.annotation;
+package org.project.commons.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

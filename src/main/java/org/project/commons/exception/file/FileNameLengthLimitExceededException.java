@@ -1,16 +1,10 @@
-package com.ruoyi.common.exception.file;
+package org.project.commons.exception.file;
 
-/**
- * 文件名称超长限制异常类
- * 
- * @author ruoyi
- */
-public class FileNameLengthLimitExceededException extends FileException
-{
-    private static final long serialVersionUID = 1L;
+import org.springframework.http.HttpStatus;
 
-    public FileNameLengthLimitExceededException(int defaultFileNameLength)
-    {
-        super("upload.filename.exceed.length", new Object[] { defaultFileNameLength });
+public class FileNameLengthLimitExceededException extends FileException {
+
+    public FileNameLengthLimitExceededException(String module, HttpStatus code, String msg) {
+        super(module + "upload.filename.exceed.length", code, msg);
     }
 }

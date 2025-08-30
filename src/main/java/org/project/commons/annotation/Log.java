@@ -1,12 +1,13 @@
-package main.java.org.project.commons.annotation;
+package org.project.commons.annotation;
+
+import org.project.commons.enums.BusinessType;
+import org.project.commons.enums.OperatorType;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import com.ruoyi.common.enums.BusinessType;
-import com.ruoyi.common.enums.OperatorType;
 
 
 @Target({ ElementType.PARAMETER, ElementType.METHOD })

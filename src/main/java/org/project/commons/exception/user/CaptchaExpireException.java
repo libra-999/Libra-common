@@ -1,16 +1,10 @@
-package com.ruoyi.common.exception.user;
+package org.project.commons.exception.user;
 
-/**
- * 验证码失效异常类
- * 
- * @author ruoyi
- */
+import org.springframework.http.HttpStatus;
+
 public class CaptchaExpireException extends UserException
 {
-    private static final long serialVersionUID = 1L;
-
-    public CaptchaExpireException()
-    {
-        super("user.jcaptcha.expire", null);
+    public CaptchaExpireException() {
+        super("user.captcha.expire", HttpStatus.BAD_GATEWAY, null);
     }
 }

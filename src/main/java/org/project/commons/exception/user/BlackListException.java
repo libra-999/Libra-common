@@ -1,16 +1,10 @@
-package com.ruoyi.common.exception.user;
+package org.project.commons.exception.user;
 
-/**
- * 黑名单IP异常类
- * 
- * @author ruoyi
- */
-public class BlackListException extends UserException
-{
-    private static final long serialVersionUID = 1L;
+import org.springframework.http.HttpStatus;
 
-    public BlackListException()
-    {
-        super("login.blocked", null);
+public class BlackListException extends UserException {
+
+    public BlackListException(String module, HttpStatus status, String message) {
+        super("login.blocked", HttpStatus.FORBIDDEN, null);
     }
 }

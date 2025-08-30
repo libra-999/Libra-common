@@ -1,24 +1,9 @@
-package com.ruoyi.common.enums;
+package org.project.commons.enums;
 
-/**
- * 操作人类别
- * 
- * @author ruoyi
- */
-public enum OperatorType
-{
-    /**
-     * 其它
-     */
+public enum OperatorType {
+
     OTHER,
-
-    /**
-     * 后台用户
-     */
     MANAGE,
-
-    /**
-     * 手机端用户
-     */
-    MOBILE
+    MOBILE,
+    COMPUTER
 }
