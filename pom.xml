@@ -9,9 +9,9 @@
         <relativePath/>
     </parent>
 
-    <groupId>org.project</groupId>
+    <groupId>com.github.libra999</groupId>
     <artifactId>commons</artifactId>
-    <version>1.0.0</version>
+    <version>main-SNAPSHOT</version>
     <name>commons</name>
     <packaging>jar</packaging>
 
@@ -28,21 +28,7 @@
         <hu.tool>5.8.38</hu.tool>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
-
     <dependencies>
-
-        <dependency>
-            <groupId>com.github.libra999</groupId>
-            <artifactId>spring-boot</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
