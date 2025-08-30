@@ -3,10 +3,7 @@ package org.project.commons.core.domain.entity;
 import java.util.ArrayList;
 import java.util.List;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.project.commons.core.domain.BaseEntity;
@@ -15,7 +12,7 @@ import org.springframework.data.annotation.Id;
 @Setter
 @Getter
 @AllArgsConstructor(staticName = "of")
-@Builder
+@NoArgsConstructor
 public class SysMenu extends BaseEntity {
 
     @Id

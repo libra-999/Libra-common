@@ -2,7 +2,9 @@ package org.project.commons.core.domain.entity;
 
 import java.util.Set;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
@@ -12,6 +14,8 @@ import org.springframework.data.annotation.Id;
 
 @Getter
 @Setter
+@AllArgsConstructor(staticName = "of")
+@NoArgsConstructor
 public class SysRole extends BaseEntity {
 
     @Excel(name = "角色序号", cellType = Excel.ColumnType.NUMERIC)

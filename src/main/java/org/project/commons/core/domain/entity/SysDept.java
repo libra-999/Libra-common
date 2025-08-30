@@ -13,7 +13,7 @@ import org.springframework.data.annotation.Id;
 @Getter
 @Setter
 @AllArgsConstructor(staticName = "of")
-@Builder
+@NoArgsConstructor
 public class SysDept extends BaseEntity {
 
     @Id
