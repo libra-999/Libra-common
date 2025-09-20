@@ -130,34 +130,92 @@
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
-<!--   smaller and faster than JSON object      -->
+        <!--   smaller and faster than JSON object      -->
         <dependency>
             <groupId>com.baidu</groupId>
             <artifactId>jprotobuf</artifactId>
             <version>2.4.23</version>
         </dependency>
 
-<!--        Java client library for Google APIs.-->
+        <!--   Alipay Sandbox     -->
 <!--        <dependency>-->
-<!--            <groupId>com.google.api-client</groupId>-->
-<!--            <artifactId>google-api-client</artifactId>-->
-<!--            <version>2.6.0</version>-->
+<!--            <groupId>com.alipay.sdk</groupId>-->
+<!--            <artifactId>alipay-sdk-java</artifactId>-->
+<!--            <version>4.22.110.ALL</version>-->
 <!--        </dependency>-->
 
-<!--        Java SDK for OAuth 2.0 and OpenID Connect (OIDC)-->
-<!--        <dependency>-->
-<!--            <groupId>com.nimbusds</groupId>-->
-<!--            <artifactId>oauth2-oidc-sdk</artifactId>-->
-<!--            <version>11.8</version>-->
-<!--        </dependency>-->
+        <!--  API Document  -->
+        <!--        <dependency>-->
+        <!--            <groupId>com.github.xiaoymin</groupId>-->
+        <!--            <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>-->
+        <!--            <version>4.5.0</version>-->
+        <!--        </dependency>-->
 
-<!--        JWT (JSON Web Token) and JOSE (JSON Object Signing and Encryption)-->
-<!--        <dependency>-->
-<!--            <groupId>com.nimbusds</groupId>-->
-<!--            <artifactId>nimbus-jose-jwt</artifactId>-->
-<!--            <version>9.37.3</version>-->
-<!--        </dependency>-->
+        <!--        Java client library for Google APIs.-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.google.api-client</groupId>-->
+        <!--            <artifactId>google-api-client</artifactId>-->
+        <!--            <version>2.6.0</version>-->
+        <!--        </dependency>-->
 
+        <!--        Java SDK for OAuth 2.0 and OpenID Connect (OIDC)-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.nimbusds</groupId>-->
+        <!--            <artifactId>oauth2-oidc-sdk</artifactId>-->
+        <!--            <version>11.8</version>-->
+        <!--        </dependency>-->
+
+        <!--        JWT (JSON Web Token) and JOSE (JSON Object Signing and Encryption)-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.nimbusds</groupId>-->
+        <!--            <artifactId>nimbus-jose-jwt</artifactId>-->
+        <!--            <version>9.37.3</version>-->
+        <!--        </dependency>-->
+
+
+        <!--   nacos plugin and log in nacos     -->
+        <!--        <dependency>-->
+        <!--            <groupId>com.alibaba.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+        <!--            <exclusions>-->
+        <!--                <exclusion>-->
+        <!--                    <artifactId>nacos-log4j2-adapter</artifactId>-->
+        <!--                    <groupId>com.alibaba.nacos</groupId>-->
+        <!--                </exclusion>-->
+        <!--                <exclusion>-->
+        <!--                    <artifactId>nacos-logback-adapter-12</artifactId>-->
+        <!--                    <groupId>com.alibaba.nacos</groupId>-->
+        <!--                </exclusion>-->
+        <!--                <exclusion>-->
+        <!--                    <artifactId>logback-adapter</artifactId>-->
+        <!--                    <groupId>com.alibaba.nacos</groupId>-->
+        <!--                </exclusion>-->
+        <!--            </exclusions>-->
+        <!--        </dependency>-->
+
+        <!--    SQL read from query data by mybatis plus    -->
+        <!--        <dependency>-->
+        <!--            <groupId>com.baomidou</groupId>-->
+        <!--            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>-->
+        <!--            <version>3.5.12</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.baomidou</groupId>-->
+        <!--            <artifactId>mybatis-plus-jsqlparser</artifactId>-->
+        <!--            <version>3.5.12</version>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.baomidou</groupId>-->
+        <!--            <artifactId>mybatis-plus-annotation</artifactId>-->
+        <!--            <version>3.5.12</version>-->
+        <!--            <optional>true</optional>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.baomidou</groupId>-->
+        <!--            <artifactId>mybatis-plus-extension</artifactId>-->
+        <!--            <version>3.5.12</version>-->
+        <!--            <optional>true</optional>-->
+        <!--        </dependency>-->
     </dependencies>
 
     <build>
@@ -182,12 +240,12 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-<!--                    <excludes>-->
-<!--                        <exclude>-->
-<!--                            <groupId>org.projectlombok</groupId>-->
-<!--                            <artifactId>lombok</artifactId>-->
-<!--                        </exclude>-->
-<!--                    </excludes>-->
+                    <!--                    <excludes>-->
+                    <!--                        <exclude>-->
+                    <!--                            <groupId>org.projectlombok</groupId>-->
+                    <!--                            <artifactId>lombok</artifactId>-->
+                    <!--                        </exclude>-->
+                    <!--                    </excludes>-->
                     <skip>true</skip>
                 </configuration>
             </plugin>
