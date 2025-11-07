@@ -26,6 +26,7 @@
         <jaxb.api>2.3.1</jaxb.api>
         <user.agent>1.21</user.agent>
         <hu.tool>5.8.38</hu.tool>
+        <easyexcel.version>3.2.1</easyexcel.version>
     </properties>
 
     <dependencies>
@@ -136,6 +137,14 @@
             <artifactId>jprotobuf</artifactId>
             <version>2.4.23</version>
         </dependency>
+
+        <!--alibaba excel-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>${easyexcel.version}</version>
+        </dependency>
+
 
         <!--   Alipay Sandbox     -->
 <!--        <dependency>-->
