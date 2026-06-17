@@ -6,7 +6,7 @@ import java.util.List;
 
 import lombok.extern.slf4j.Slf4j;
 import org.project.commons.constant.HttpStatus;
-import org.project.commons.core.domain.AjaxResult;
+import org.project.commons.core.domain.Resp;
 import org.project.commons.core.domain.model.LoginUser;
 import org.project.commons.core.page.PageDomain;
 import org.project.commons.core.page.TableDataInfo;
@@ -60,35 +60,35 @@ public class BaseController {
         return rspData;
     }
 
-    public AjaxResult success() {
-        return AjaxResult.success();
+    public Resp success() {
+        return Resp.success();
     }
 
-    public AjaxResult error() {
-        return AjaxResult.error();
+    public Resp error() {
+        return Resp.error();
     }
 
-    public AjaxResult success(String message) {
-        return AjaxResult.success(message);
+    public Resp success(String message) {
+        return Resp.success(message);
     }
 
-    public AjaxResult success(Object data) {
-        return AjaxResult.success(data);
+    public Resp success(Object data) {
+        return Resp.success(data);
     }
 
-    public AjaxResult error(String message) {
-        return AjaxResult.error(message);
+    public Resp error(String message) {
+        return Resp.error(message);
     }
 
-    public AjaxResult warn(String message) {
-        return AjaxResult.warn(message);
+    public Resp warn(String message) {
+        return Resp.warn(message);
     }
 
-    protected AjaxResult toAjax(int rows) {
-        return rows > 0 ? AjaxResult.success() : AjaxResult.error();
+    protected Resp toAjax(int rows) {
+        return rows > 0 ? Resp.success() : Resp.error();
     }
 
-    protected AjaxResult toAjax(boolean result) {
+    protected Resp toAjax(boolean result) {
         return result ? success() : error();
     }
 

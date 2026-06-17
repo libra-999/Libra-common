@@ -71,7 +71,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openxmlformats.schemas.drawingml.x2006.spreadsheetDrawing.CTMarker;
 import org.project.commons.annotation.Excel;
 import org.project.commons.annotation.Excels;
-import org.project.commons.core.domain.AjaxResult;
+import org.project.commons.core.domain.Resp;
 import org.project.commons.core.text.Convert;
 import org.project.commons.enums.BusinessType;
 import org.project.commons.exception.util.UtilException;
@@ -345,11 +345,11 @@ public class ExcelUtil<T> {
         return list;
     }
 
-    public AjaxResult exportExcel(List<T> list, String sheetName) {
+    public Resp exportExcel(List<T> list, String sheetName) {
         return exportExcel(list, sheetName, StringUtils.EMPTY);
     }
 
-    public AjaxResult exportExcel(List<T> list, String sheetName, String title) {
+    public Resp exportExcel(List<T> list, String sheetName, String title) {
         this.init(list, sheetName, title, BusinessType.EXPORT);
         return exportExcel();
     }
@@ -365,11 +365,11 @@ public class ExcelUtil<T> {
         exportExcel(response);
     }
 
-    public AjaxResult importTemplateExcel(String sheetName) {
+    public Resp importTemplateExcel(String sheetName) {
         return importTemplateExcel(sheetName, StringUtils.EMPTY);
     }
 
-    public AjaxResult importTemplateExcel(String sheetName, String title) {
+    public Resp importTemplateExcel(String sheetName, String title) {
         this.init(null, sheetName, title, BusinessType.IMPORT);
         return exportExcel();
     }
@@ -396,14 +396,14 @@ public class ExcelUtil<T> {
         }
     }
 
-    public AjaxResult exportExcel() {
+    public Resp exportExcel() {
         OutputStream out = null;
         try {
             writeSheet();
             String filename = encodingFilename(sheetName);
             out = new FileOutputStream(getAbsoluteFile(filename));
             wb.write(out);
-            return AjaxResult.success(filename);
+            return Resp.success(filename);
         } catch (Exception e) {
             log.error("导出Excel异常{}", e.getMessage());
             throw new UtilException("导出Excel失败，请联系网站管理员！");
