@@ -27,5 +27,6 @@ public class Constants {
     public static final String JWT_USERID = "userid";
     public static final String JWT_CREATED = "created";
     public static final String JWT_AUTHORITIES = "authorities";
+    public static final String UNKNOWN_ERROR = "Unknown Error";
 
 }

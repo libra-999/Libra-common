@@ -8,12 +8,9 @@ import java.nio.charset.StandardCharsets;
 
 import jakarta.servlet.ServletRequest;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.exception.ExceptionUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 @Slf4j
-public class HttpHelper {
+public class HttpString {
 
     public static String getBodyString(ServletRequest request) {
         StringBuilder sb = new StringBuilder();
