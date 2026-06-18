@@ -1,4 +1,4 @@
-package org.project.commons.filter;
+package org.project.commons.utils.filter;
 
 import com.alibaba.fastjson2.filter.SimplePropertyPreFilter;
 

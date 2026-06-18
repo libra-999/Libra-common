@@ -1,4 +1,4 @@
-package org.project.commons.core.domain;
+package org.project.commons.model;
 
 import lombok.Getter;
 import lombok.Setter;

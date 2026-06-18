@@ -1,4 +1,4 @@
-package org.project.commons.core.domain;
+package org.project.commons.utils.tree;
 
 import java.io.Serializable;
 import java.util.List;
@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 import lombok.Setter;
-import org.project.commons.core.domain.entity.SysDept;
-import org.project.commons.core.domain.entity.SysMenu;
+import org.project.commons.technology.domain.entity.SysDept;
+import org.project.commons.technology.domain.entity.SysMenu;
 import org.project.commons.utils.string.StringUtils;
 
 @Getter

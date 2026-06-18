@@ -3,7 +3,7 @@ package org.project.commons.utils.security;
 import java.util.Collection;
 
 import org.project.commons.constant.Constants;
-import org.project.commons.core.domain.model.LoginUser;
+import org.project.commons.technology.domain.model.LoginUser;
 import org.project.commons.exception.user.UserException;
 import org.project.commons.utils.string.StringUtils;
 import org.springframework.http.HttpStatus;

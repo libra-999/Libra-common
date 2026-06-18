@@ -1,10 +1,5 @@
 package org.project.commons.utils.file;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Paths;
-import java.util.Objects;
-
 import lombok.Getter;
 import lombok.Setter;
 import org.apache.commons.io.FilenameUtils;
@@ -15,6 +10,11 @@ import org.project.commons.utils.date.DateUtils;
 import org.project.commons.utils.string.StringUtils;
 import org.project.commons.utils.uuid.uuidUtils;
 import org.springframework.web.multipart.MultipartFile;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.Objects;
 
 @Getter
 @Setter
@@ -63,7 +63,7 @@ public class FileUploadUtils {
     }
 
     public static String extractFilename(MultipartFile file) {
-        return StringUtils.format("{}/{}_{}.{}", DateUtils.datePath(), FilenameUtils.getBaseName(file.getOriginalFilename()),getExtension(file));
+        return StringUtils.format("{}/{}_{}.{}", DateUtils.datePath(), FilenameUtils.getBaseName(file.getOriginalFilename()), getExtension(file));
     }
 
     public static String uuidFilename(MultipartFile file) {
@@ -99,7 +99,7 @@ public class FileUploadUtils {
             if (allowedExtension == MimeTypeUtils.IMAGE_EXTENSION) {
                 throw new InvalidExtensionException.InvalidImageExtensionException(allowedExtension, extension,
                     fileName);
-            } else if (allowedExtension ==MimeTypeUtils.FLASH_EXTENSION) {
+            } else if (allowedExtension == MimeTypeUtils.FLASH_EXTENSION) {
                 throw new InvalidExtensionException.InvalidFlashExtensionException(allowedExtension, extension,
                     fileName);
             } else if (allowedExtension == MimeTypeUtils.MEDIA_EXTENSION) {
@@ -130,4 +130,5 @@ public class FileUploadUtils {
         }
         return extension;
     }
+
 }

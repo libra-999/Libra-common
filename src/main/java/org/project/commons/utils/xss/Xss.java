@@ -1,4 +1,4 @@
-package org.project.commons.xss;
+package org.project.commons.utils.xss;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;

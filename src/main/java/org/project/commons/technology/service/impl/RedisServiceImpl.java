@@ -1,9 +1,9 @@
-package org.project.commons.core.redis;
+package org.project.commons.technology.service.impl;
 
 import com.alibaba.fastjson2.JSON;
 import lombok.RequiredArgsConstructor;
 import org.apache.poi.ss.formula.functions.T;
-import org.project.commons.core.service.RedisService;
+import org.project.commons.technology.service.RedisService;
 import org.springframework.data.redis.core.*;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 @Service
 @RequiredArgsConstructor
-public class RedisCache implements RedisService {
+public class RedisServiceImpl implements RedisService {
 
     private final StringRedisTemplate template;
 

@@ -1,4 +1,4 @@
-package org.project.commons.core.text;
+package org.project.commons.utils.text;
 
 
 import org.project.commons.utils.string.StringUtils;

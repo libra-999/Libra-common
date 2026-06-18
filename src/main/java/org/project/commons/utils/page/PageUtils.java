@@ -2,8 +2,8 @@ package org.project.commons.utils.page;
 
 import com.github.pagehelper.PageHelper;
 
-import org.project.commons.core.page.PageDomain;
-import org.project.commons.core.page.TableSupport;
+import org.project.commons.technology.page.PageDomain;
+import org.project.commons.technology.page.TableSupport;
 
 public class PageUtils extends PageHelper
 {
