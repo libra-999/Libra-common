@@ -3,7 +3,6 @@ package org.project.commons.utils.security;
 import java.util.Collection;
 
 import org.project.commons.constant.Constants;
-import org.project.commons.technology.domain.model.LoginUser;
 import org.project.commons.exception.user.UserException;
 import org.project.commons.utils.string.StringUtils;
 import org.springframework.http.HttpStatus;
@@ -15,37 +14,37 @@ import org.springframework.util.PatternMatchUtils;
 
 public class SecurityUtils {
 
-    public static Long getUserId() {
-        try {
-            return getLoginUser().getUserId();
-        } catch (Exception e) {
-            throw new UserException("user", HttpStatus.UNAUTHORIZED, "Get user ID exception");
-        }
-    }
-
-    public static Long getDeptId() {
-        try {
-            return getLoginUser().getDeptId();
-        } catch (Exception e) {
-            throw new UserException("user", HttpStatus.UNAUTHORIZED, "Abnormal in obtaining department ID");
-        }
-    }
-
-    public static String getUsername() {
-        try {
-            return getLoginUser().getUsername();
-        } catch (Exception e) {
-            throw new UserException("user", HttpStatus.UNAUTHORIZED, "Abnormal access to user account");
-        }
-    }
-
-    public static LoginUser getLoginUser() {
-        try {
-            return (LoginUser) getAuthentication().getPrincipal();
-        } catch (Exception e) {
-            throw new UserException("user", HttpStatus.UNAUTHORIZED, "Abnormal access to user information");
-        }
-    }
+//    public static Long getUserId() {
+//        try {
+//            return getLoginUser().getUserId();
+//        } catch (Exception e) {
+//            throw new UserException("user", HttpStatus.UNAUTHORIZED, "Get user ID exception");
+//        }
+//    }
+//
+//    public static Long getDeptId() {
+//        try {
+//            return getLoginUser().getDeptId();
+//        } catch (Exception e) {
+//            throw new UserException("user", HttpStatus.UNAUTHORIZED, "Abnormal in obtaining department ID");
+//        }
+//    }
+//
+//    public static String getUsername() {
+//        try {
+//            return getLoginUser().getUsername();
+//        } catch (Exception e) {
+//            throw new UserException("user", HttpStatus.UNAUTHORIZED, "Abnormal access to user account");
+//        }
+//    }
+//
+//    public static LoginUser getLoginUser() {
+//        try {
+//            return (LoginUser) getAuthentication().getPrincipal();
+//        } catch (Exception e) {
+//            throw new UserException("user", HttpStatus.UNAUTHORIZED, "Abnormal access to user information");
+//        }
+//    }
 
     public static Authentication getAuthentication() {
         return SecurityContextHolder.getContext().getAuthentication();
@@ -65,9 +64,9 @@ public class SecurityUtils {
         return userId != null && 1L == userId;
     }
 
-    public static boolean hasPermission(String permission) {
-        return hasPermission(getLoginUser().getPermissions(), permission);
-    }
+//    public static boolean hasPermission(String permission) {
+//        return hasPermission(getLoginUser().getPermissions(), permission);
+//    }
 
     public static boolean hasPermission(Collection<String> authorities, String permission) {
         return authorities.stream().filter(StringUtils::hasText)
