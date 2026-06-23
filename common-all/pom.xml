@@ -5,13 +5,15 @@
     <packaging>jar</packaging>
 
     <parent>
-        <groupId>com.common</groupId>
+        <groupId>hldev.xyz</groupId>
         <artifactId>libra-common</artifactId>
         <version>1.0.0</version>
     </parent>
 
     <artifactId>common-all</artifactId>
     <name>libra-common-all</name>
+    <url>https://github.com/libra-999/Libra-common.git</url>
+
 
     <dependencies>
         <dependency>
@@ -20,19 +22,37 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.common</groupId>
-            <artifactId>common-capcha</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.common</groupId>
+            <groupId>hldev.xyz</groupId>
             <artifactId>common-cache</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.common</groupId>
+            <groupId>hldev.xyz</groupId>
             <artifactId>common-util</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <dependency>
+            <groupId>hldev.xyz</groupId>
+            <artifactId>common-capcha</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
