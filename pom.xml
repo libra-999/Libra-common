@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
 
-    <groupId>hldev.xyz</groupId>
+    <groupId>hldev.xyz.libra-common</groupId>
     <artifactId>libra-common</artifactId>
     <version>1.0.0</version>
     <name>common</name>
@@ -94,6 +94,16 @@
                     <target>17</target>
                 </configuration>
             </plugin>
+            <plugin>
+						<groupId>org.sonatype.central</groupId>
+						<artifactId>central-publishing-maven-plugin</artifactId>
+						<version>0.8.0</version>
+						<extensions>true</extensions>
+						<configuration>
+							<publishingServerId>central</publishingServerId>
+							<autoPublish>false</autoPublish>
+						</configuration>
+					</plugin>
         </plugins>
     </build>
 </project>

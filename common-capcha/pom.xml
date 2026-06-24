@@ -5,7 +5,7 @@
     <packaging>jar</packaging>
 
     <parent>
-        <groupId>hldev.xyz</groupId>
+        <groupId>hldev.xyz.libra-common</groupId>
         <artifactId>libra-common</artifactId>
         <version>1.0.0</version>
     </parent>
