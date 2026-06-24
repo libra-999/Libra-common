@@ -23,17 +23,17 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>hldev.xyz</groupId>
+            <groupId>xyz.hldev.libra-common</groupId>
             <artifactId>common-cache</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>
-            <groupId>hldev.xyz</groupId>
+            <groupId>xyz.hldev.libra-common</groupId>
             <artifactId>common-util</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
         <dependency>
-            <groupId>hldev.xyz</groupId>
+            <groupId>xyz.hldev.libra-common</groupId>
             <artifactId>common-capcha</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
