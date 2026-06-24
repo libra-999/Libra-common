@@ -1,0 +1,22 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
+<servers>
+    <server>
+        <id>central</id>
+        <username>HG13Ze</username>
+        <password>TpvZZRaPrFy9U0hajfIMEcgO6zoBQwqdY</password>
+    </server>
+</servers>
+
+<profiles>
+        <profile>
+            <id>{ANY_NAME}</id>
+            <properties>
+                <gpg.keyname>{_GET_GPG_FROM_GPU}</gpg.keyname>
+            </properties>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>{MATCH_WITH_ANY_NAME}</activeProfile>
+    </activeProfiles>
+</settings>

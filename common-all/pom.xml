@@ -5,13 +5,14 @@
     <packaging>jar</packaging>
 
     <parent>
-        <groupId>hldev.xyz.libra-common</groupId>
+        <groupId>xyz.hldev.libra-common</groupId>
         <artifactId>libra-common</artifactId>
         <version>1.0.0</version>
     </parent>
 
     <artifactId>common-all</artifactId>
     <name>libra-common-all</name>
+    <description>All module dependencies</description>
     <url>https://github.com/libra-999/Libra-common.git</url>
 
 
