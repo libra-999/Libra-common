@@ -9,5 +9,4 @@ target/
 .idea
 .vscode/
 
-
 dependency-reduced-pom.xml
