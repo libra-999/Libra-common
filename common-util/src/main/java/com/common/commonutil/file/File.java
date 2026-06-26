@@ -28,4 +28,5 @@ public class File {
         int index = Math.max(fileName.lastIndexOf('/'), fileName.lastIndexOf('\\'));
         return fileName.substring(index + 1);
     }
+
 }

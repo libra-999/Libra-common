@@ -2,7 +2,7 @@ package com.common.util;
 
 import cn.hutool.core.lang.Assert;
 import com.common.commonutil.constant.MimeTypeConstant;
-import com.common.commonutil.constant.PrefixConstant;
+import com.common.commonutil.constant.ContentTypeConstant;
 import com.common.commonutil.file.FileType;
 import com.common.commonutil.file.File;
 import org.junit.jupiter.api.Test;
@@ -15,7 +15,7 @@ public class FileTest {
     public void FileNameCheck (){
 
         String filename = File.getName(TEST_URl);
-        Assert.isTrue(!filename.startsWith(PrefixConstant.HTTPS) || !filename.startsWith(PrefixConstant.HTTP), "==> getName Method is wrong logic!");
+        Assert.isTrue(!filename.startsWith(ContentTypeConstant.HTTPS) || !filename.startsWith(ContentTypeConstant.HTTP), "==> getName Method is wrong logic!");
     }
 
     @Test

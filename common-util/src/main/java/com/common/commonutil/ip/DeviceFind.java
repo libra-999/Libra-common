@@ -19,9 +19,9 @@ public class DeviceFind {
             String res = HttpUtil.get(WHO_IS + "/" + ip);
             JSONObject json = JSONUtil.parseObj(res);
 
-            if (StrUtil.isBlankIfStr(json)){
+            if (StrUtil.isBlankIfStr(json)) {
                 return null;
-            }else {
+            } else {
 
                 String region = json.get("region").toString();
                 String city = json.get("city").toString();
@@ -30,7 +30,7 @@ public class DeviceFind {
                 String country = json.get("country").toString();
 
                 log.info("==> latitude: {}, longitude: {}", latitude, longitude);
-                return JSONUtil.parseObj(DeviceInfo.of(city,region,country,latitude,longitude));
+                return JSONUtil.parseObj(DeviceInfo.of(city, region, country, latitude, longitude));
             }
 
         } catch (Exception e) {

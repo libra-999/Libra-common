@@ -7,5 +7,8 @@ public class PatternConstant {
     public static final String REGX_IP = "((" + REGX_0_255 + "\\.){3}" + REGX_0_255 + ")";
     public static final String REGX_IP_WILDCARD = "(((\\*\\.){3}\\*)|(" + REGX_0_255 + "(\\.\\*){3})|(" + REGX_0_255 + "\\." + REGX_0_255 + ")(\\.\\*){2}" + "|((" + REGX_0_255 + "\\.){3}\\*))";
     public static final String REGX_IP_SEG = "(" + REGX_IP + "\\-" + REGX_IP + ")";
+    public static final String BASE_CHAR = "abcdefghijklmnopqrstuvwxyz";
+    public static final String BASE_NUMBER = "0123456789";
+    public static final String BASE_CHAR_NUM = BASE_CHAR + BASE_NUMBER;
 
 }

@@ -12,7 +12,7 @@ public class BeanScan {
         return ClassScanner.scanPackage(packageName, filterClass);
     }
 
-    public static Set<java.lang.Class<?>> scanPackage(String packageName){
+    public static Set<java.lang.Class<?>> scanPackage(String packageName) {
         return ClassScanner.scanPackage(packageName);
     }
 

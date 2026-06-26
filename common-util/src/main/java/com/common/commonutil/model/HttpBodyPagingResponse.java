@@ -13,6 +13,7 @@ import java.util.Optional;
 @NoArgsConstructor
 @Builder
 public class HttpBodyPagingResponse {
+
     public static final String SIZE = "size";
     public static final String PAGE = "page";
     public static final String TOTAL = "total";

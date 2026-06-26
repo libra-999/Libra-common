@@ -18,4 +18,5 @@ public class FileType {
         }
         return fileName.substring(separatorIndex + 1).toLowerCase();
     }
+
 }

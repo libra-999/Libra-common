@@ -12,9 +12,26 @@
 
     <artifactId>common-capcha</artifactId>
     <name>libra-common-captcha</name>
-    <description>Still processing...</description>
+    <description>There're many reCAPTCHA tools that most system want to build to protect their security. Here is key class to use
+        'CaptchaProvider'
+    </description>
 
     <dependencies>
+        <dependency>
+            <groupId>xyz.hldev.libra-common</groupId>
+            <artifactId>common-util</artifactId>
+            <version>1.0.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>cn.hutool</groupId>
+                    <artifactId>hutool-all</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

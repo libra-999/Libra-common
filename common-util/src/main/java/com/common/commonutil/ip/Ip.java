@@ -1,8 +1,8 @@
 package com.common.commonutil.ip;
 
 import cn.hutool.core.util.StrUtil;
+import com.common.commonutil.constant.ErrorConstant;
 import com.common.commonutil.constant.PatternConstant;
-import com.common.commonutil.constant.PrefixConstant;
 import com.common.commonutil.request.ServletRequest;
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -28,7 +28,7 @@ public class Ip {
             return InetAddress.getLocalHost().getHostName();
         } catch (UnknownHostException ignored) {
         }
-        return PrefixConstant.UNKNOWN;
+        return ErrorConstant.UNKNOWN;
     }
 
     public static String getIpAddr(HttpServletRequest request) {
@@ -175,7 +175,7 @@ public class Ip {
     }
 
     public static boolean isUnknown(String checkString) {
-        return StrUtil.isBlank(checkString) || PrefixConstant.UNKNOWN.equalsIgnoreCase(checkString);
+        return StrUtil.isBlank(checkString) || ErrorConstant.UNKNOWN.equalsIgnoreCase(checkString);
     }
 
     public static boolean isIP(String ip) {

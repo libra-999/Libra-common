@@ -11,6 +11,7 @@ import java.time.*;
 
 
 public class Date {
+
     private static final Logger logger = LoggerFactory.getLogger(Date.class);
 
     public static java.util.Date getNowDate() {
@@ -37,7 +38,7 @@ public class Date {
     }
 
     public static String parseDateToStr(final String format, final java.util.Date date) {
-        logger.info("==> Format: {}" , format);
+        logger.info("==> Format: {}", format);
         return new SimpleDateFormat(format).format(date);
     }
 
