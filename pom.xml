@@ -7,7 +7,7 @@
     <groupId>xyz.hldev.libra-common</groupId>
     <artifactId>libra-common</artifactId>
     <name>common</name>
-    <version>1.0.1</version>
+    <version>1.1.0</version>
 
     <description>Libra common utils personal</description>
     <url>https://github.com/libra-999/Libra-common.git</url>
