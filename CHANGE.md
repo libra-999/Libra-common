@@ -3,10 +3,17 @@
 # 1.1.0(2026-06-27)
 
 ### Refactor structure
-* 【all, capcha, util , cache】 Rename some files and re-write logic in captcha to avoid duplication in cn.hutool 
-* 【*.md】 license to cn.hutool
-### Add line CAPTCHA
-* 【 capcha】 we just make a captcha function for easy  to implement with project
+* 【all, capcha, util , cache】
+  * Renamed several files for better consistence
+  * Refactored the capcha implementation to reduce duplicate logic from `hutool-all`
+* 【*.md】 Added license attribution for  cn.hutool
+### Add LINE_CAPTCHA
+* 【 capcha】       
+  * Added a simplified LineCaptcha implementation to make captcha integration easier and reduce the amount of setup code required. 
+* 【 util】  
+  * Added captcha utility methods for image rendering based on the generated captcha code.
+  * Added color and RGB utility functions.
+  * Added SHA-256 encryption utilities for secure hashing
 
 
 # 1.0.1(2026-06-23)
