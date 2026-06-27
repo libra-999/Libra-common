@@ -3,6 +3,7 @@ package com.common.commoncapcha.context;
 import cn.hutool.core.img.GraphicsUtil;
 import cn.hutool.core.img.ImgUtil;
 import cn.hutool.core.util.RandomUtil;
+import com.common.commoncapcha.generate.RandomGenerator;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -23,7 +24,7 @@ public class LineCaptcha extends CaptchaManage {
     }
 
     public LineCaptcha(int width, int height, Font font, int codeLength) {
-        super(width, height, font, codeLength);
+        super(width, height, font, new RandomGenerator(codeLength));
     }
 
     @Override
@@ -34,7 +35,6 @@ public class LineCaptcha extends CaptchaManage {
             drawInterfere(g2d);
             drawString(g2d, code);
         } catch (Exception e) {
-
             System.out.println(e.getMessage());
         } finally {
             g2d.dispose();

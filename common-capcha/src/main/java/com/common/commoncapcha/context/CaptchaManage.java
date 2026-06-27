@@ -29,11 +29,11 @@ public abstract class CaptchaManage implements CaptchaService {
 
     protected CodeService codeGenerate;
 
-    CaptchaManage(int width, int height, Font font, int codeCount) {
+    CaptchaManage(int width , int height, Font font , CodeService generator){
         this.width = width;
         this.height = height;
         this.font = font;
-        this.length = codeCount;
+        this.codeGenerate = generator;
     }
 
     @Override
@@ -43,7 +43,7 @@ public abstract class CaptchaManage implements CaptchaService {
         ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
         ImgUtil.writePng(imageCode(this.code), byteArrayOutputStream);
 
-        System.out.println("Image byte size: " + byteArrayOutputStream.size());
+        System.out.println("==> Image size: " + byteArrayOutputStream.size());
         this.imageBytes = byteArrayOutputStream.toByteArray();
     }
 
@@ -53,13 +53,12 @@ public abstract class CaptchaManage implements CaptchaService {
         }catch (Exception e) {
             System.out.println(e.getMessage());
         }
-
     }
 
     @Override
     public String getCodeCaptcha() {
         if (this.code == null) {
-            System.out.println("==> Code has been null, please init again");
+            System.out.println("==> Code has been null so please generate code again");
             createCodeCaptcha(); // if code is null
         }
         return this.code;
@@ -67,7 +66,6 @@ public abstract class CaptchaManage implements CaptchaService {
 
     @Override
     public boolean verifyCodeCaptcha(String userInputCode) {
-        System.out.println("==> UserCode: " + userInputCode + " == " + this.code);
         return this.codeGenerate.verifyCaptcha(getCodeCaptcha(), userInputCode);
     }
 

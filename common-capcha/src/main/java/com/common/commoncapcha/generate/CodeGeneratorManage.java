@@ -20,6 +20,4 @@ public abstract class CodeGeneratorManage implements CodeService {
         this.baseStr = baseStr;
         this.length = count;
     }
-
-
 }

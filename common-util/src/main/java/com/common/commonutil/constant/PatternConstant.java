@@ -10,5 +10,5 @@ public class PatternConstant {
     public static final String BASE_CHAR = "abcdefghijklmnopqrstuvwxyz";
     public static final String BASE_NUMBER = "0123456789";
     public static final String BASE_CHAR_NUM = BASE_CHAR + BASE_NUMBER;
-
+    public static final String BASE_OPERATION = "+-*";
 }
