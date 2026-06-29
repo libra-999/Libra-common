@@ -9,14 +9,14 @@
 
 <profiles>
     <profile>
-        <id>{ANY_NAME}</id>
+        <id>gpg-sign</id>
             <properties>
-                <gpg.keyname>{GET_GPG_FROM_GPU}</gpg.keyname>
+                <gpg.keyname>{GPG_KEY}</gpg.keyname>
             </properties>
         </profile>
     </profiles>
 
     <activeProfiles>
-        <activeProfile>{MATCH_WITH_ANY_NAME}</activeProfile>
+        <activeProfile>gpg-sign</activeProfile>
     </activeProfiles>
 </settings>

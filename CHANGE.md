@@ -13,8 +13,8 @@
 * 【 util】  
   * Added captcha utility methods for image rendering based on the generated captcha code.
   * Added color and RGB utility functions.
-  * Added SHA-256 encryption utilities for secure hashing
-
+  * Added `SHA-256` encryption utilities for secure hashing
+]()
 
 # 1.0.1(2026-06-23)
 
