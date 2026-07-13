@@ -14,15 +14,9 @@ public class PC {
         return prt.getProperty("os.name").toLowerCase().startsWith("windows");
     }
 
-    public static boolean isLinux() {
-        Properties prt = System.getProperties();
-        return prt.getProperty("os.name").toLowerCase().startsWith("linux");
-    }
-
-
-    // scan device that using currently
+    // scan device that using currently , if linux OS so device is DEV or PROD
     public static boolean isPsOS() {
-        return isMacOS() || isWindows() || isLinux();
+        return isMacOS() || isWindows();
     }
 
 }
