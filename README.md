@@ -21,11 +21,9 @@ A Java tools class for file, encryption , bean share , cache service , captcha a
     <dependency>
         <groupId>xyz.hldev.libra-common</groupId>
         <artifactId>common-all</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </dependency>
 ```
 After inject the dependency so let run :
 `mvn clean package`
-
-<b>Please make sure have `settings.xml` in `~/.m2` in your maven path. if it's not so please copy from directory setting and pastes in `~/.m2`</b>
-<p style="color: red"><i>This package also use library from CN.HUTOOL</i></p>
+<p><i>Some packages in this common get from 'CN.HUTOOL'</i></p>
