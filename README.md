@@ -26,4 +26,6 @@ A Java tools class for file, encryption , bean share , cache service , captcha a
 ```
 After inject the dependency so let run :
 `mvn clean package`
+
+<b>Please make sure have `settings.xml` in `~/.m2` in your maven path. if it's not so please copy from directory setting and pastes in `~/.m2`</b>
 <p><i>Some packages in this common get from 'CN.HUTOOL'</i></p>
